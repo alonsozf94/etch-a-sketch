@@ -41,7 +41,10 @@ let myCanvas = buildCanvas(slider.value);
 let option = "black"
 let mouseDown = 0;
 
-document.body.onmousedown = () => mouseDown = 1;
+document.body.onmousedown = () => {
+    mouseDown = 1;
+    return false;
+};
 document.body.onmouseup = () => mouseDown = 0;
 document.querySelector("#black").addEventListener("click", () => option = "black");
 document.querySelector("#rainbow").addEventListener("click", () => option = "rainbow");
